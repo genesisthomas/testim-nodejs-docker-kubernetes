@@ -49,8 +49,8 @@ stringData:
         // Setup your production environment if needed
         steps {
             sh 'echo "Setup production environment here"'
-            }
         }
-        }
+      }
+    }
   }
 }
