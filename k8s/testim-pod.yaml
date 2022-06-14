@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.26.1 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.network/app-network: "true"
+    io.kompose.service: testim
+  name: testim
+  namespace: nodejs-integration
+spec:
+  containers:
+    - env:
+        - name: PROJECT
+          valueFrom:
+            secretKeyRef:
+              key: PROJECT
+              name: mysecret
+        - name: TOKEN
+          valueFrom:
+            secretKeyRef:
+              key: TOKEN
+              name: mysecret
+      args:
+        - testim 
+        - --token
+        - "$(TOKEN)"
+        - --project
+        - "$(PROJECT)"
+        - --grid
+        - testim-ha-grid
+        - --name
+        - node js server
+        - --tunnel
+        - --tunnel-port
+        - "3000"
+        # - --timeout
+        # - "10"
+      image: testim/docker-cli:latest
+      name: testim
+      ports:
+        - containerPort: 3001
+      resources: {}
+  restartPolicy: Never
+status: {}

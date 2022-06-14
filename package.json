@@ -1,0 +1,15 @@
+{
+    "name": "express",
+    "version": "1.0.0",
+    "description": "Basic NodeJS with docker and kubernetes",
+    "main": "index.js",
+    "scripts": {
+        "test": "testim --help"
+    },
+    "author": "Genesis Thomas",
+    "license": "ISC",
+    "dependencies": {
+        "@testim/testim-cli": "latest",
+        "express": "^4.18.1"
+    }
+}

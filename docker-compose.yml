@@ -1,0 +1,28 @@
+version: '3'
+services:
+
+  testim:
+    image: testim/docker-cli:latest
+    container_name: testim
+    restart: "no"
+    ports:
+      - "3001:3001"
+    command: 'testim --token "${TOKEN}" --project "${PROJECT}" --grid "testim-ha-grid" --name "node js server" --tunnel --tunnel-port 3000'
+    depends_on:
+      - nodejs
+    networks:
+      - app-network    
+
+  nodejs:
+    image: "genesisthomas/nodejs-starter:1.0"
+    container_name: nodejs
+    restart: always
+    env_file: .env
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network  
+
+networks:
+  app-network:
+    driver: bridge
