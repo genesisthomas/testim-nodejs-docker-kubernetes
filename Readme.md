@@ -8,7 +8,7 @@
   - [**Extras**](#extras)
 </br>
 
-    <img alt="alt_text" width="600px" src="docs/k8_arc.png" />
+<img alt="alt_text" width="600px" src="docs/k8_arc.png" />
 
    *Disclaimer:  This Custom Action is provided "AS IS".  It is for instructional purposes only and is not officially supported by Testim*    </br></br>
    
