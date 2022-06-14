@@ -6,10 +6,9 @@
   - [**Steps to deploy in Kubernetes from CLI:** </br><p>](#steps-to-deploy-in-kubernetes-from-cli-brp)
   - [**Steps to deploy in Kubernetes via Jenkins Pipeline:** </br><p>](#steps-to-deploy-in-kubernetes-via-jenkins-pipeline-brp)
   - [**Extras**](#extras)
-
-
 </br>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         <img alt="alt_text" width="600px" src="docs/k8_arc.png" />
+
+    <img alt="alt_text" width="600px" src="docs/k8_arc.png" />
 
    *Disclaimer:  This Custom Action is provided "AS IS".  It is for instructional purposes only and is not officially supported by Testim*    </br></br>
    
