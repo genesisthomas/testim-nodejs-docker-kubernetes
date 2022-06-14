@@ -63,7 +63,7 @@
 
 * Set Testim's token & project id as password parameters
 
-* Select pipeline script from SCM -> Git -> JenkinsFile
+* Select pipeline script from SCM -> Git -> Jenkinsfile
 
 
 </br>
