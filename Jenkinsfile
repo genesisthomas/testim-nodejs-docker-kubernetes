@@ -51,6 +51,5 @@ stringData:
             sh 'echo "Setup production environment here"'
         }
       }
-    }
   }
 }
