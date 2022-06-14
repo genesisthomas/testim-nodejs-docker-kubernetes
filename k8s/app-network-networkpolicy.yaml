@@ -3,7 +3,7 @@ kind: NetworkPolicy
 metadata:
   creationTimestamp: null
   name: app-network
-  namespace: nodejs-integration
+  namespace: node-dev
 spec:
   ingress:
     - from:

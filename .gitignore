@@ -1,6 +1,5 @@
 .env
-mysecret.yaml
+k8s/mysecret.yaml
 .DS_Store
 package-lock.json
 node_modules/
-Jenkinsfile

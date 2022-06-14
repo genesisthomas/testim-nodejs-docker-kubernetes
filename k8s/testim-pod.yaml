@@ -9,7 +9,7 @@ metadata:
     io.kompose.network/app-network: "true"
     io.kompose.service: testim
   name: testim
-  namespace: nodejs-integration
+  namespace: node-dev
 spec:
   containers:
     - env:

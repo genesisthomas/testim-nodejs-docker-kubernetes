@@ -1,17 +1,21 @@
-
-- [**Testim integration with Nodejs sample app on docker to kubernetes cluster:**</br>](#testim-integration-with-nodejs-sample-app-on-docker-to-kubernetes-clusterbr)
-  - [**Steps to setup Testim integration for local/grid CLI runs:**](#steps-to-setup-testim-integration-for-localgrid-cli-runs)
-  - [**Steps to build docker & publish to docker registry:**](#steps-to-build-docker--publish-to-docker-registry)
-  - [**Steps to deploy in Kubernetes:** </br>](#steps-to-deploy-in-kubernetes-br)
-    - [**Extras**](#extras)
-
-</br>
-
-   *Disclaimer:  This Custom Action is provided "AS IS".  It is for instructional purposes only and is not officially supported by Testim*    </br>
-
 ## **Testim integration with Nodejs sample app on docker to kubernetes cluster:**</br>
 
-###  **Steps to setup Testim integration for local/grid CLI runs:**
+  
+  - [**Steps to setup Testim integration for local/grid CLI runs:**<p>](#steps-to-setup-testim-integration-for-localgrid-cli-runsp)
+  - [**Steps to build docker & publish to docker registry:**<p>](#steps-to-build-docker--publish-to-docker-registryp)
+  - [**Steps to deploy in Kubernetes from CLI:** </br><p>](#steps-to-deploy-in-kubernetes-from-cli-brp)
+  - [**Steps to deploy in Kubernetes via Jenkins Pipeline:** </br><p>](#steps-to-deploy-in-kubernetes-via-jenkins-pipeline-brp)
+  - [**Extras**](#extras)
+
+
+</br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         <img alt="alt_text" width="600px" src="docs/k8_arc.png" />
+
+   *Disclaimer:  This Custom Action is provided "AS IS".  It is for instructional purposes only and is not officially supported by Testim*    </br></br>
+   
+<p>
+
+###  **Steps to setup Testim integration for local/grid CLI runs:**<p>
 
 * Run the following command within your node js application
 
@@ -23,7 +27,7 @@
 
 </br> 
 
-###  **Steps to build docker & publish to docker registry:**
+###  **Steps to build docker & publish to docker registry:**<p>
 
 * Create your Dockerfile and build docker:
     
@@ -42,26 +46,33 @@
         docker push genesisthomas/nodejs-starter:1.0
 </br> 
 
-###  **Steps to deploy in Kubernetes:** </br> 
+###  **Steps to deploy in Kubernetes from CLI:** </br><p> 
 
 
 * Set Testim's token & project id within k8s/mysecret.yaml.
 
 * cd into k8s folder.
 
-* Set current namespace: </br>
-  
-        kubectl create ns nodejs-integration && kubectl config set-context --current --namespace=nodejs-integration
-
-* The following shell will deploy k8s, run testim tests & perform cleanup:</br>
+* The following command will deploy k8s, run testim tests & perform cleanup:</br>
   
         chmod +x pipeline.sh && ./pipeline.sh
 
+</br>
+
+###  **Steps to deploy in Kubernetes via Jenkins Pipeline:** </br><p> 
+
+
+* Set Testim's token & project id as password parameters
+
+* Select pipeline script from SCM -> Git -> JenkinsFile
 
 
 </br>
 
-####   **Extras**
+###   **Extras**
+ <p>
+
+* Follow [this](https://devopscube.com/jenkins-build-trigger-github-pull-request/) link to achieve automated build trigger on every github pull request.
 
 * Tool to convert docker-compose to k8s
 https://kompose.io/ to convert docker-compose to k8s yamls:</br>

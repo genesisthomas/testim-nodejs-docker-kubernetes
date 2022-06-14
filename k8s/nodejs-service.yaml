@@ -8,7 +8,7 @@ metadata:
   labels:
     io.kompose.service: nodejs
   name: nodejs
-  namespace: nodejs-integration
+  namespace: node-dev
 spec:
   ports:
     - name: "3000"

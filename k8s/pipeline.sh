@@ -1,8 +1,19 @@
 #!/bin/bash
 CODE=0
+NAMESPACE = $1
+# checks if namespace is supplied, defaults to node-dev
+if [ -z "$1" ]
+  then
+    echo "No namespace is supplied as argument! Default: node-dev"
+    NAMESPACE="node-dev"
+fi
 # delete entire namespace
-kubectl delete all --all -n nodejs-integration &
-# deploys the nodejs-integration namespace
+kubectl delete all --all -n $NAMESPACE &
+# create namespace
+kubectl create ns $NAMESPACE || true &
+# set's the namespace as current namespace
+kubectl config set-context --current --namespace=$NAMESPACE || true & 
+# deploys the namespace
 kubectl apply -f . &&
     # waits for testim pod to be ready
     kubectl wait --for=condition=Ready -f testim-pod.yaml &&
@@ -25,6 +36,6 @@ kubectl apply -f . &&
         CODE=1
     fi &&
     # delete entire namespace
-    kubectl delete all --all -n nodejs-integration &&
+    kubectl delete all --all -n $NAMESPACE &&
     docker container prune -f &&
     exit $CODE
