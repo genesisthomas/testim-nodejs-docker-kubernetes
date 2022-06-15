@@ -73,6 +73,8 @@
 
 * Follow [this](https://devopscube.com/jenkins-build-trigger-github-pull-request/) link to achieve automated build trigger on every github pull request.
 
+* Follow [this](https://medium.com/bb-tutorials-and-thoughts/how-to-deploy-nodejs-apis-on-azure-aks-using-helm-8b37ab190d4e) to deploy NodeJS APIs on Azure AKS using HELM.
+
 * Tool to convert docker-compose to k8s
 https://kompose.io/ to convert docker-compose to k8s yamls:</br>
 
