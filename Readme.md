@@ -6,7 +6,7 @@
 
 <img alt="alt_text" width="600px" src="docs/k8_arc.png" />
 
-   *Disclaimer:  This Custom Action is provided "AS IS".  It is for instructional purposes only and is not officially supported by Testim*    </br></br>
+   *Disclaimer:  This project is provided "AS IS".  It is for instructional purposes only and is not officially supported by Testim*    </br></br>
 
   - [**Setup Testim integration for local/grid CLI runs:**<p>](#setup-testim-integration-for-localgrid-cli-runsp)
   - [**Deploy & test in Kubernetes from CLI:** </br><p>](#deploy--test-in-kubernetes-from-cli-brp)
