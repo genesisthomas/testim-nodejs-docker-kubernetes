@@ -7,7 +7,7 @@ services:
     restart: "no"
     ports:
       - "3001:3001"
-    command: 'testim --token "${TOKEN}" --project "${PROJECT}" --grid "testim-ha-grid" --name "node js server" --tunnel --tunnel-port 3000'
+    command: 'testim --token "${TOKEN}" --project "${PROJECT}" --grid "Testim-Grid" --name "node js server" --tunnel --tunnel-port 3000'
     depends_on:
       - nodejs
     networks:
